@@ -11,7 +11,7 @@ public class Traductor {
             ProcessBuilder pb = new ProcessBuilder(
                     "java",
                     "-cp", System.getProperty("java.class.path"),
-                    "com.germangascon.tema01.Robot"
+                    "com.germangascon.stevancodes18.Robot"
             );
 
             // No usamos inheritIO porque queremos controlar los flujos nosotros

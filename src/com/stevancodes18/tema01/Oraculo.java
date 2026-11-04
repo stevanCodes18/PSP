@@ -12,7 +12,8 @@ public class Oraculo {
             "Consulta de nuevo despues de la siesta"
     };
     public static void main(String[] args) {
-     if (args.length < 2){
+        // Si faltan argumentos → código de salida distinto de 0
+        if (args.length < 2){
          System.err.println("Uso: Oraculo nombre pregunta");
          System.exit(1);
      }
@@ -24,11 +25,11 @@ public class Oraculo {
          if(i > 1) pregunta.append(" ");
          pregunta.append(args[i]);
      }
-
+// Elección reproducible: índice = longitud de la pregunta % número de excusas
      int indice= pregunta.length() % Excusas.length;
      String respuesta=Excusas[indice];
 
-        System.out.println("Hola"+nombre+" el oraculo responde:");
+        System.out.println("Hola "+nombre+" el oraculo responde:");
         System.out.println("-> " + respuesta);
     }
 }

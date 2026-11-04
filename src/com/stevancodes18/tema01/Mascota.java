@@ -1,6 +1,10 @@
 package com.stevancodes18.tema01;
 
 public class Mascota {
+    /**
+     * Simula una mascota que avanza un número de pasos.
+     * Por cada paso imprime PID, nombre y número de paso.
+     */
     public static void main(String[] args) {
         if (args.length < 2){
             System.err.println("Uso: Mascota nombre, pasos");
@@ -22,6 +26,7 @@ public class Mascota {
 
         for (int i=0;i<=pasos;i++){
             System.out.println("PID= "+pid+ " | "+nombre+ " | paso " + i);
+            // Pequeña pausa para que se note la concurrencia
             try{
                 Thread.sleep(100 + (int)(Math.random()*200));
             } catch (InterruptedException e) {
